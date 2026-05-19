@@ -3,7 +3,9 @@ PUT http://localhost:4000/patients/223e4567-e89b-12d3-a456-426614174014
 Content-Type: application/json
 
 {
-"name": "Viky Cham",
-"address": "123 hello world",
-"dateOfBirth": "1999-03-11"
+  "address": "789 Willow St, Springfield update",
+  "dateOfBirth": "1987-10-17",
+  "email": "isabella.walker@example.com",
+  "id": "223e4567-e89b-12d3-a456-426614174014",
+  "name": "Isabella Walker"
 }
