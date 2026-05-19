@@ -1,0 +1,9 @@
+### PUT request to update patient
+PUT http://localhost:4000/patients/223e4567-e89b-12d3-a456-426614174014
+Content-Type: application/json
+
+{
+"name": "Viky Cham",
+"address": "123 hello world",
+"dateOfBirth": "1999-03-11"
+}

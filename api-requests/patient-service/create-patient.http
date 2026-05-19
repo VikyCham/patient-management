@@ -4,10 +4,9 @@ Content-Type: application/json
 
 {
   "name": "Viky Cham",
-  "email": "",
+  "email": "viky@gmail.com",
   "address": "123 hello world",
-  "dateOfBirth": "1999-03-11",
-  "registeredDate": "2026-02-11"
+  "dateOfBirth": "1999-03-11"
 }
 
 ###
