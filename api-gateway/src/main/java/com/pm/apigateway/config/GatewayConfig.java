@@ -9,10 +9,24 @@ import org.springframework.context.annotation.Configuration;
 public class GatewayConfig {
     @Bean
     public RouteLocator customRoutes(RouteLocatorBuilder builder) {
+
         return builder.routes()
-                .route("patient-route",
-                        r -> r.path("/api/patients", "/api/patients/**")
+                //Auth Service
+                .route("auth-service-route",
+                        r -> r.path("/auth/**")
                                 .filters(f -> f.stripPrefix(1))
+                                .uri("http://auth-service:4005"))
+
+                //Patient-service
+                .route("patient-service-route",
+                        r -> r.path("/api/patients/**")
+                                .filters(f -> f.stripPrefix(1))
+                                .uri("http://patient-service:4000"))
+
+                // Swagge/OpenAPI Docs
+                .route("api-docs-patient-route",
+                        r -> r.path("/api-docs/patients")
+                                .filters(f -> f.rewritePath("/api-docs/patients", "/v3/api-docs"))
                                 .uri("http://patient-service:4000"))
                 .build();
     }
