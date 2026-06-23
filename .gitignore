@@ -14,6 +14,6 @@
 /.classpath
 /.project
 /.settings/
-/target/
+target/
 /bin/
 /out/
